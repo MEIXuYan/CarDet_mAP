@@ -44,13 +44,14 @@ for file_name in file_list:
   data = data['objs']
   for obj in data:
     obj_name = obj['type']
+    conf = obj['type_confidence']
     x_c_n = obj['bbox_centre_x']
     y_c_n = obj['bbox_centre_y']
     width_n = obj['bbox_size_x']
     height_n = obj['bbox_size_y']
     img_width = 640
     img_height = 480
-    conf = 1.0 
+     
     # get class name
     # car bicycle truck pedestrian
     if obj_name not in class_list:
