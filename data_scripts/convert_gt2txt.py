@@ -44,6 +44,8 @@ for file_name in file_list:
       obj_name = 'bicycle'
     if obj_name in ['person', 'pedestrian']:
       obj_name = 'pedestrian'
+    
+    left, top, right, bottom = int(float(left)), int(float(top)), int(float(right)), int(float(bottom))
     dst.write(obj_name + " " + str(left) + " " + str(top) + " " + str(right) + " " + str(bottom) + '\n')
 
 print("Conversion completed!")
