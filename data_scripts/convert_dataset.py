@@ -17,13 +17,14 @@ import shutil
 import operator
 
 # data input 
-TXT_PATH = './dataset53/txt/'
-JSON_PATH = './dataset53/json/'
-JPG_PATH = './dataset53/jpg/'
+BASE_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+TXT_PATH = BASE_PATH + '/dataset53/txt/'
+JSON_PATH = BASE_PATH + '/dataset53/json/'
+JPG_PATH = BASE_PATH + '/dataset53/jpg/'
 # data output
-PD_PATH = './dataset53/pred/'
-GT_PATH = './dataset53/gt/'
-IMG_PATH = './input/images-optional/'
+PD_PATH = BASE_PATH + '/dataset53/pred/'
+GT_PATH = BASE_PATH + '/dataset53/gt/'
+IMG_PATH = BASE_PATH + '/input/images-optional/'
 file_list = []
 
 # dir
