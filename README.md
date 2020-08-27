@@ -12,5 +12,6 @@ Python顺序运行以下代码：
 python data_scripts/convert_dataset.py
 python data_scripts/convert_gt2txt.py
 python data_scripts/convert_pred2txt.py
-python main.py
+python mAP.py
+python CarDet_Analysis.py
 ```

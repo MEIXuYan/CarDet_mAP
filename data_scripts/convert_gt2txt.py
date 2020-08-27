@@ -34,6 +34,7 @@ for file_name in file_list:
     top = obj['points'][0][1]
     right = obj['points'][1][0]
     bottom = obj['points'][1][1]
+
     # get class name
     # car bicycle truck pedestrian
     # car person pedestrian bicycle truck motorbike bicylcle
@@ -46,6 +47,7 @@ for file_name in file_list:
       obj_name = 'pedestrian'
     
     # order check
+    # make sure left < right / top < bottom
     if float(left) > float(right):
       right,left = left,right
     if float(top) > float(bottom):
