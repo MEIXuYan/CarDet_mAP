@@ -46,7 +46,7 @@ for file_name in file_list:
       obj_name = 'pedestrian'
     
     # order check
-    if float(right) < float(left):
+    if float(left) > float(right):
       right,left = left,right
     if float(top) > float(bottom):
       top,bottom = bottom,top
