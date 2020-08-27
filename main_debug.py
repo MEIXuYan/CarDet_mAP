@@ -43,10 +43,10 @@ if args.set_class_iou is not None:
 # make sure that the cwd() is the location of the python script (so that every path makes sense)
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-GT_PATH = os.path.join(os.getcwd(), 'debug', 'gt')
-DR_PATH = os.path.join(os.getcwd(), 'debug', 'pred')
+GT_PATH = os.path.join(os.getcwd(), 'input_debug', 'gt')
+DR_PATH = os.path.join(os.getcwd(), 'input_debug', 'pred')
 # if there are no images then no animation can be shown
-IMG_PATH = os.path.join(os.getcwd(), 'debug', 'img')
+IMG_PATH = os.path.join(os.getcwd(), 'input_debug', 'img')
 
 if os.path.exists(IMG_PATH): 
     for dirpath, dirnames, files in os.walk(IMG_PATH):
@@ -336,7 +336,7 @@ def draw_plot_func(dictionary, n_classes, window_title, plot_title, x_label, out
 TEMP_FILES_PATH = ".temp_files"
 if not os.path.exists(TEMP_FILES_PATH): # if it doesn't exist already
     os.makedirs(TEMP_FILES_PATH)
-output_files_path = "output"
+output_files_path = "output_debug"
 if os.path.exists(output_files_path): # if it exist already
     # reset the output directory
     shutil.rmtree(output_files_path)
