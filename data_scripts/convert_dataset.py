@@ -25,6 +25,7 @@ JPG_PATH = BASE_PATH + '/dataset53/jpg/'
 PD_PATH = BASE_PATH + '/dataset53/pred/'
 GT_PATH = BASE_PATH + '/dataset53/gt/'
 IMG_PATH = BASE_PATH + '/input/images-optional/'
+IMG_PATH_1 = BASE_PATH + '/input_car/images-optional/'
 file_list = []
 
 # dir
@@ -34,6 +35,8 @@ if not os.path.exists(GT_PATH):
     os.makedirs(GT_PATH)
 if not os.path.exists(IMG_PATH): 
     os.makedirs(IMG_PATH)
+if not os.path.exists(IMG_PATH_1): 
+    os.makedirs(IMG_PATH_1)
 
 # file list 
 for dirpath, dirnames, files in os.walk(JSON_PATH):
@@ -48,10 +51,12 @@ for file_name in file_list:
     jsond = GT_PATH + file_name + '.json'
     jpgs = JPG_PATH + file_name + '.jpg'
     jpgd = IMG_PATH + file_name + '.jpg'
+    jpgd1 = IMG_PATH_1 + file_name + '.jpg'
     # 
     shutil.copy2(txts, txtd)
     shutil.copy2(jsons, jsond)
     shutil.copy2(jpgs, jpgd)
+    shutil.copy2(jpgs, jpgd1)
 
     #print (file_name)
 

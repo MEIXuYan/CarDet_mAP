@@ -8,10 +8,17 @@
 ## 运行方法
 Python顺序运行以下代码：
 
+多类别精度计算：
 ```
 python data_scripts/convert_dataset.py
 python data_scripts/convert_gt2txt.py
 python data_scripts/convert_pred2txt.py
 python mAP.py
-python CarDet_Analysis.py
+```
+
+Car类别精度分距离计算：
+```
+python data_scripts/convert_gt2txt_car.py
+python data_scripts/convert_pred2txt_car.py
+python mAP_car.py
 ```
