@@ -4,3 +4,5 @@ debug/
 input*/
 dataset*/
 output*/
+
+.temp_files/
